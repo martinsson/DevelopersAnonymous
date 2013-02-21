@@ -1,0 +1,20 @@
+{
+  "name": "gilded-rose",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "workshop variation with tests of the Gilded Rose kata",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "mocha": "~1.8.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinsson/AnonymousDevelopers.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
