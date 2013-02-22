@@ -1,4 +1,4 @@
-package org.agilegrenoble.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics;
 
 public class Item {
 	private String name;

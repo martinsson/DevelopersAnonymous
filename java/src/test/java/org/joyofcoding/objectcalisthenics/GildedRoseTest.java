@@ -1,4 +1,4 @@
-package org.agilegrenoble.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.fest.assertions.api.Assertions.extractProperty;
@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.joyofcoding.objectcalisthenics.GildedRose;
+import org.joyofcoding.objectcalisthenics.Item;
 import org.junit.Before;
 import org.junit.Test;
 
