@@ -25,9 +25,8 @@
           <artifactId>fest-assert-core</artifactId>
           <version>2.0M8</version>
         </dependency>
-        <!-- You must download and install approvalstest in you local or corporate repository -->
-        <!-- Cf. ApprovalTests.012.zip in http://sourceforge.net/projects/approvaltests/files/ApprovalTests.Java/ -->
-        <!-- You will find it in src\main\lib\ApprovalTests -->
+        <!-- You must install approvalstest in you local or corporate repository -->
+        <!-- Cf. src/main/lib/README.txt file to install it                      -->
         <dependency>
             <groupId>com.approvaltests</groupId>
             <artifactId>approval</artifactId>
