@@ -1,4 +1,4 @@
-package org.agilegrenoble.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics;
 
 import java.util.ArrayList;
 import java.util.List;
