@@ -27,6 +27,7 @@
         </dependency>
         <!-- You must download and install approvalstest in you local or corporate repository -->
         <!-- Cf. ApprovalTests.012.zip in http://sourceforge.net/projects/approvaltests/files/ApprovalTests.Java/ -->
+        <!-- You will find it in src\main\lib\ApprovalTests -->
         <dependency>
             <groupId>com.approvaltests</groupId>
             <artifactId>approval</artifactId>

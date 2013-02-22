@@ -10,9 +10,20 @@ import org.junit.Test;
 
 /**
  * Testing GildedRose with Golden Master.
- * 
+ * <p>
+ *  <b>Warning:</b>
+ *  <ul>
+ * 	 <li> You must download and install approvalstest in you local or corporate repository
+ *    <ul>
+ *      <li>Cf.  <a href="http://sourceforge.net/projects/approvaltests/files/ApprovalTests.Java/">ApprovalTests.012.zip</a></li> 
+        <li>You will find it in src\main\lib\ApprovalTests</li>
+      </ul>
+ *   </li>
+ *  </ul>
+ * </p>  
  * @see <a href="http://craftedsw.blogspot.fr/2012/11/testing-legacy-code-with-golden-master.html#comment-form">Testing legacy code with Golden Master</a> 
  *      by Sandro Mancuso
+ * @see <a href="http://approvaltests.sourceforge.net//">Approval Tests</a>
  * 
  */
 public class GoldenMasterGildedRoseTest {
