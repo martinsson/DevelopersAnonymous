@@ -5,7 +5,6 @@ var chai = require("chai"),
     MersenneTwister = require('./lib/mersenne-twister.js');
 
 chai.should();
-chai.use(require('chai-things'));
 
 suite('GildedRose', function () {
 
