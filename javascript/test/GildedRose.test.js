@@ -31,11 +31,24 @@ suite('GildedRose', function () {
         repeatUpdateQuality(3);
         assertItemsCollectionHasExpectedItems([
             {sellIn: 7,  quality: 17, name: "+5 Dexterity Vest"},
-            {sellIn: -1,  quality: 4,  name: "Aged Brie"},
+            {sellIn: -1, quality: 4,  name: "Aged Brie"},
             {sellIn: 2,  quality: 4,  name: "Elixir of the Mongoose"},
             {sellIn: 0,  quality: 80, name: "Sulfuras, Hand of Ragnaros"},
             {sellIn: 12, quality: 23, name: "Backstage passes to a TAFKAL80ETC concert"},
             {sellIn: 0,  quality: 3,  name: "Conjured Mana Cake"}
+        ]);
+    });
+
+
+    test('after a shiftload of days', function () {
+        repeatUpdateQuality(500);
+        assertItemsCollectionHasExpectedItems([
+            {sellIn: -490, quality: 0,  name: "+5 Dexterity Vest"},
+            {sellIn: -498, quality: 50, name: "Aged Brie"},
+            {sellIn: -495, quality: 0,  name: "Elixir of the Mongoose"},
+            {sellIn: 0,    quality: 80, name: "Sulfuras, Hand of Ragnaros"},
+            {sellIn: -485, quality: 0,  name: "Backstage passes to a TAFKAL80ETC concert"},
+            {sellIn: -497, quality: 0,  name: "Conjured Mana Cake"}
         ]);
     });
 
