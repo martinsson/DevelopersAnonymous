@@ -1,14 +1,19 @@
 var chai = require("chai"),
     assert = chai.assert,
     GildedRose = require('../src/GildedRose.js'),
-    Item = require('../src/Item.js');
+    Item = require('../src/Item.js'),
+    MersenneTwister = require('./lib/mersenne-twister.js');
 
 chai.should();
 chai.use(require('chai-things'));
 
 suite('GildedRose', function () {
 
-    var gildedRose, items;
+    var gildedRose,
+        items,
+        MAX_BACKSTAGE_SELLIN = 30,
+        MAX_QUALITY = 50,
+        rand = new MersenneTwister(3456789);
 
     setup(function () {
         gildedRose = new GildedRose();
@@ -52,10 +57,71 @@ suite('GildedRose', function () {
         ]);
     });
 
+    test('backstage pass golden copy', function () {
+        items = aBunchOfBackstagePasses()
+        repeatUpdateQuality(11);
+        extractQuality().should.deep.equal([ 47, 50, 0, 0, 21, 45, 50, 0, 0,
+            17, 50, 0, 26, 35, 42, 27, 50, 43, 0, 0, 50, 20, 12, 0, 30, 50, 20,
+            11, 0, 48, 26, 50, 50, 0, 45, 40, 27, 50, 47, 50, 11, 32, 22, 50,
+            50, 19, 50, 29, 44, 0, 20, 48, 50, 0, 37, 50, 29, 48, 36, 50, 50,
+            14, 0, 40, 47, 50, 0, 0, 0, 50, 50, 0, 11, 0, 50, 12, 0, 50, 46,
+            49, 37, 50, 50, 0, 39, 0, 11, 42, 16, 32, 50, 34, 34, 50, 0, 35,
+            30, 0, 50, 50 ]);
+        extractSellIn().should.deep.equal([ 7, 1, -4, -6, 3, 3, 16, -1, -4, 8,
+            14, -6, 9, 10, 10, 19, 9, 11, -8, -11, 9, 19, 16, -11, 17, 4, 6,
+            12, -1, 13, 18, 14, 16, -3, 1, 19, 17, 19, 14, 6, 16, 12, 9, 2, 5,
+            13, 10, 15, 14, -2, 10, 8, 18, -8, 12, 18, 12, 18, 10, 5, 5, 11,
+            -2, 16, 1, 1, -7, -5, -7, 13, 14, -5, 19, -6, 3, 12, -10, 2, 6, 10,
+            15, 5, 0, -3, 19, -6, 12, 1, 14, 7, 1, 11, 4, 0, -6, 4, 0, -8, 15,
+            9 ]);
+    });
+
+    function extractQuality() {
+        var properties = [ ];
+        for (var i = 0, n = items.length ; i < n ; ++i) {
+            properties.push(items[i].getQuality());
+        }
+        return properties;
+    }
+
+    function extractSellIn() {
+        var properties = [ ];
+        for (var i = 0, n = items.length ; i < n ; ++i) {
+            properties.push(items[i].getSellIn());
+        }
+        return properties;
+    }
+
     function repeatUpdateQuality(times) {
         for (var i = 0 ; i < times ; i++) {
             gildedRose.updateQuality(items);
         }
+    }
+
+    function aBunchOfBackstagePasses() {
+        var listOfPasses = [ ];
+        for (var i = 0; i < 100; i++) {
+            listOfPasses.push(aRandomBackstagePass());
+        }
+        return listOfPasses;
+    }
+
+    function randomSellIn() {
+        return randNextInt(MAX_BACKSTAGE_SELLIN);
+    }
+
+    function randomQuality() {
+        return randNextInt(MAX_QUALITY);
+    }
+
+    function randNextInt(max) {
+        return Math.floor(rand.random() * (max + 1));
+    }
+
+    function aRandomBackstagePass() {
+        var quality = randomQuality(),
+            sellIn  = randomSellIn();
+        return new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
     function assertItemsCollectionHasExpectedItems(expected_items) {
