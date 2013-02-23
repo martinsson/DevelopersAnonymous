@@ -148,10 +148,10 @@ suite('GildedRose', function () {
         assert(found_item, message + ' is missing');
         if (found_item) {
             assert(found_item.getQuality() === expected_item.quality,
-                message + ' has quality = ' + found_item.getQuality() + ', expeted ' + expected_item.quality
+                message + ' has quality = ' + found_item.getQuality() + ', expected ' + expected_item.quality
             );
             assert(found_item.getSellIn() === expected_item.sellIn,
-                message + ' has quality = ' + found_item.getSellIn() + ', expeted ' + expected_item.sellIn
+                message + ' has quality = ' + found_item.getSellIn() + ', expected ' + expected_item.sellIn
             );
         }
     }
