@@ -5,8 +5,7 @@ module.exports = function(grunt) {
                 globals: ['should'],
                 timeout: 3000,
                 ignoreLeaks: false,
-                grep: '*-test',
-                ui: 'bdd',
+                ui: 'tdd',
                 reporter: 'nyan'
             },
             all: {

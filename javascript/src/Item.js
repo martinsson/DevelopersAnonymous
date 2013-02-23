@@ -1,5 +1,7 @@
 "use strict";
 
+module.exports = Item;
+
 function Item(name, sellIn, quality) {
     this.name    = name;
     this.quality = quality;
