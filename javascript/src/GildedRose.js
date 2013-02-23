@@ -19,15 +19,14 @@ GildedRose.prototype = {
         return items;
     },
 
-    updateQuality: function (list) {
-        var items = list;
-        for (i = 0; i < items.size(); i++) {
-            if (!items[i].getName() === "Aged Brie"
-                    && !items[i].getName()
-                             === "Backstage passes to a TAFKAL80ETC concert") {
+    updateQuality: function (items) {
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].getName() !== "Aged Brie"
+                    && items[i].getName()
+                             !== "Backstage passes to a TAFKAL80ETC concert") {
                 if (items[i].getQuality() > 0) {
-                    if (!items[i].getName()
-                             === "Sulfuras, Hand of Ragnaros") {
+                    if (items[i].getName()
+                             !== "Sulfuras, Hand of Ragnaros") {
                         items[i].setQuality(items[i].getQuality() - 1);
                     }
                 }
@@ -54,17 +53,17 @@ GildedRose.prototype = {
                 }
             }
 
-            if (!items[i].getName() === "Sulfuras, Hand of Ragnaros") {
+            if (items[i].getName() !== "Sulfuras, Hand of Ragnaros") {
                 items[i].setSellIn(items[i].getSellIn() - 1);
             }
 
             if (items[i].getSellIn() < 0) {
-                if (!items[i].getName() === "Aged Brie") {
-                    if (!items[i].getName()
-                             === "Backstage passes to a TAFKAL80ETC concert") {
+                if (items[i].getName() !== "Aged Brie") {
+                    if (items[i].getName()
+                             !== "Backstage passes to a TAFKAL80ETC concert") {
                         if (items[i].getQuality() > 0) {
-                            if (!items[i].getName()
-                                     === "Sulfuras, Hand of Ragnaros") {
+                            if (items[i].getName()
+                                     !== "Sulfuras, Hand of Ragnaros") {
                                 items[i].setQuality(
                                         items[i].getQuality() - 1);
                             }
