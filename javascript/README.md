@@ -1,6 +1,7 @@
 Install `npm`. Install dependencies:
 
-    npm install
+    sudo npm install -g grunt-cli
+    sudo npm install
 
 Run the tests suite:
 
