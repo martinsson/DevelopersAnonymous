@@ -19,7 +19,8 @@ GildedRose.prototype = {
         return items;
     },
 
-    updateQuality: function (items) {
+    updateQuality: function (list) {
+        var items = list;
         for (var i = 0; i < items.length; i++) {
             if (items[i].getName() !== "Aged Brie"
                     && items[i].getName()
