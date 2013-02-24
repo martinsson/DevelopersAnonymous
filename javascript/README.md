@@ -1,3 +1,6 @@
+Gilded Rose in Javascript
+=========================
+
 Install `npm`. Install dependencies:
 
     sudo npm install -g grunt-cli

@@ -1,7 +1,7 @@
 {
   "name": "gilded-rose",
   "version": "1.0.0-SNAPSHOT",
-  "description": "workshop variation with tests of the Gilded Rose kata",
+  "description": "Workshop variation with tests of the Gilded Rose kata",
   "main": "index.js",
   "devDependencies": {
     "grunt": "~0.4.0",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/martinsson/AnonymousDevelopers.git"
   },
-  "author": "",
-  "license": "BSD",
+  "author": "Nicolas Terray",
+  "license": "WTFPL",
   "readmeFilename": "README.md"
 }
