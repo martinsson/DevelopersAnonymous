@@ -61,7 +61,7 @@ class GildedRoseTest extends FlatSpec with ShouldMatchers with BeforeAndAfter {
     items.map(_.sellIn) should equal(List(-490, -498, -495, 0, -485, -497))
   }
 
-  it should "have repeated value of containsOnlybackstage passes" in {
+  it should "have the given values for a bunch of backstage passes after 11 days" in {
     val newItems = aBunchOfBackstagePasses().toList
     gildedRose.items = newItems
     repeatUpdateQuality(11)
