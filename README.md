@@ -6,4 +6,4 @@ Do you think it is possible to fully respect all 9 rules?
 
 In this version of Gilded Rose you _can_ modify the Item class.
 
-You can download the additional [material](http://dl.dropbox.com/u/13946197/Developers%20Anonymous/) with inscructions.
+You can download the additional [material](https://www.dropbox.com/sh/g5jky2th8qpl13p/1kTaNd-0WZ/Developers%20Anonymous) with inscructions.
