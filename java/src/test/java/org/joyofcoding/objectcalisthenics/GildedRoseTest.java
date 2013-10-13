@@ -106,7 +106,7 @@ public class GildedRoseTest {
     private Item aRandomBackstagePass() {
         int quality = randomQuality();
         int sellIn = randomSellIn();
-        return new Item("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
+        return new BackstagePass(sellIn, quality);
     }
 
 }
