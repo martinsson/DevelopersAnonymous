@@ -29,6 +29,14 @@ public class QualityBetween0And50 {
 
     public void decreaseBy(int amount) {
         quality -= amount;
-        if (quality < 0) quality = 0;
+        if (quality < 0)
+            quality = 0;
+    }
+
+    public void increaseBy(int amount) {
+        quality += amount;
+        if (quality > 50)
+            quality = 50;
+
     }
 }

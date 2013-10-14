@@ -8,19 +8,24 @@ public class BackstagePass extends NormalItem {
 
     public void update() {
         decreaseSellIn();
-        quality.increase();
-
-        if (getSellIn() < 10) {
-            quality.increase();
-        }
-
-        if (getSellIn() < 5) {
-            quality.increase();
-        }
         if (isPassedDate()) {
             quality.dropToZero();
+            
+        } else if (daysBeforeConcertIsLessThan(5)) {
+            quality.increaseBy(3);
+            
+        }else if (daysBeforeConcertIsLessThan(10)) {
+            quality.increaseBy(2);
+            
+        } else {
+            quality.increaseBy(1);
+            
         }
 
+    }
+
+    private boolean daysBeforeConcertIsLessThan(int days) {
+        return getSellIn() < days;
     }
 
 }
