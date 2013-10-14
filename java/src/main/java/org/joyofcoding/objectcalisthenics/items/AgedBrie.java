@@ -1,12 +1,12 @@
-package org.joyofcoding.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics.items;
 
-public class AgedBrie extends Item {
+public class AgedBrie extends NormalItem {
 
     public AgedBrie(int sellIn, int quality) {
         super("Aged Brie", sellIn, quality);
     }
 
-    void update() {
+    public void update() {
         quality.increase();
         decreaseSellIn();
         if (isPassedDate()) {

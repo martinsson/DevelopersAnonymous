@@ -4,17 +4,17 @@ import static org.fest.assertions.api.Assertions.extractProperty;
 
 import org.fest.assertions.api.AbstractIterableAssert;
 import org.fest.assertions.api.Assertions;
-import org.joyofcoding.objectcalisthenics.Item;
+import org.joyofcoding.objectcalisthenics.items.NormalItem;
 
 public class ItemsAssert extends
-		AbstractIterableAssert<ItemsAssert, Iterable<Item>, Item> {
+		AbstractIterableAssert<ItemsAssert, Iterable<NormalItem>, NormalItem> {
 
 	
-	protected ItemsAssert(Iterable<Item> actual) {
+	protected ItemsAssert(Iterable<NormalItem> actual) {
 		super(actual, ItemsAssert.class);
 	}
 
-	public static ItemsAssert assertThat(Iterable<Item> actual) {
+	public static ItemsAssert assertThat(Iterable<NormalItem> actual) {
 		return new ItemsAssert(actual);
 	}
 

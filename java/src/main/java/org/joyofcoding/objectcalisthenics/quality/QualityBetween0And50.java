@@ -1,9 +1,9 @@
-package org.joyofcoding.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics.quality;
 
-public class Quality {
+public class QualityBetween0And50 {
     private int quality;
 
-    public Quality(int quality) {
+    public QualityBetween0And50(int quality) {
         this.quality = quality;
     }
 
@@ -11,19 +11,19 @@ public class Quality {
         return quality;
     }
 
-    void increase() {
+    public void increase() {
         if (getQuality() < 50) {
             quality++;
         }
     }
 
-    void decrease() {
+    public void decrease() {
         if (getQuality() > 0) {
             quality--;
         }
     }
 
-    void dropToZero() {
+    public void dropToZero() {
         this.quality = 0;
     }
 }

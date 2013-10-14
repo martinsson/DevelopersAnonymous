@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 import org.joyofcoding.objectcalisthenics.assertions.ItemsAssert;
+import org.joyofcoding.objectcalisthenics.items.BackstagePass;
+import org.joyofcoding.objectcalisthenics.items.NormalItem;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +14,7 @@ public class GildedRoseTest {
     private static final int MAX_BACKSTAGE_SELLIN = 30;
     private static final int MAX_QUALITY = 50;
     private GildedRose gildedRose;
-    private List<Item> items;
+    private List<NormalItem> items;
     private Random rand = new Random(3456789);
 
     @Before
@@ -87,8 +89,8 @@ public class GildedRoseTest {
         }
     }
 
-    private List<Item> aBunchOfBackstagePasses() {
-        List<Item> listOfPasses = new ArrayList<Item>();
+    private List<NormalItem> aBunchOfBackstagePasses() {
+        List<NormalItem> listOfPasses = new ArrayList<NormalItem>();
         for (int i = 0; i < 100; i++) {
             listOfPasses.add(aRandomBackstagePass());
         }
@@ -103,7 +105,7 @@ public class GildedRoseTest {
         return rand.nextInt(MAX_QUALITY);
     }
 
-    private Item aRandomBackstagePass() {
+    private NormalItem aRandomBackstagePass() {
         int quality = randomQuality();
         int sellIn = randomSellIn();
         return new BackstagePass(sellIn, quality);

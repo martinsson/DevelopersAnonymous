@@ -1,17 +1,19 @@
-package org.joyofcoding.objectcalisthenics;
+package org.joyofcoding.objectcalisthenics.items;
 
-public class Item {
+import org.joyofcoding.objectcalisthenics.quality.QualityBetween0And50;
+
+public class NormalItem {
     private String name;
     private int sellIn;
-    protected Quality quality;
+    protected QualityBetween0And50 quality;
 
-    public Item(String name, int sellIn, int quality) {
+    public NormalItem(String name, int sellIn, int quality) {
         this.name = name;
-        this.quality = new Quality(quality);
+        this.quality = new QualityBetween0And50(quality);
         this.sellIn = sellIn;
     }
 
-    void update() {
+    public void update() {
         quality.decrease();
         decreaseSellIn();
         if (isPassedDate()) {
