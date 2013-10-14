@@ -26,4 +26,9 @@ public class QualityBetween0And50 {
     public void dropToZero() {
         this.quality = 0;
     }
+
+    public void decreaseBy(int amount) {
+        quality -= amount;
+        if (quality < 0) quality = 0;
+    }
 }

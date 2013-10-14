@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.joyofcoding.objectcalisthenics.items.AgedBrie;
 import org.joyofcoding.objectcalisthenics.items.BackstagePass;
+import org.joyofcoding.objectcalisthenics.items.Conjured;
 import org.joyofcoding.objectcalisthenics.items.NormalItem;
 import org.joyofcoding.objectcalisthenics.items.Sulfuras_HandOfRagnaros;
 
@@ -21,7 +22,7 @@ public class GildedRose {
         items.add(new NormalItem("Elixir of the Mongoose", 5, 7));
         items.add(new Sulfuras_HandOfRagnaros(0, 80));
         items.add(new BackstagePass(15, 20));
-        items.add(new NormalItem("Conjured Mana Cake", 3, 6));
+        items.add(new Conjured("Mana Cake", 3, 6));
         return items;
     }
 
