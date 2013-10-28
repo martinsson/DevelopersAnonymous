@@ -1,6 +1,8 @@
 package org.joyofcoding.objectcalisthenics.quality;
 
 public class QualityBetween0And50 {
+    private static final int QUALITY_FLOOR = 0;
+    private static final int QUALITY_CEILING = 50;
     private int quality;
 
     public QualityBetween0And50(int quality) {
@@ -12,31 +14,27 @@ public class QualityBetween0And50 {
     }
 
     public void increase() {
-        if (getQuality() < 50) {
-            quality++;
-        }
+        increaseBy(1);
     }
 
     public void decrease() {
-        if (getQuality() > 0) {
-            quality--;
-        }
+        decreaseBy(1);
     }
 
     public void dropToZero() {
-        this.quality = 0;
+        this.quality = QUALITY_FLOOR;
     }
 
     public void decreaseBy(int amount) {
         quality -= amount;
-        if (quality < 0)
-            quality = 0;
+        if (quality < QUALITY_FLOOR)
+            quality = QUALITY_FLOOR;
     }
 
     public void increaseBy(int amount) {
         quality += amount;
-        if (quality > 50)
-            quality = 50;
+        if (quality > QUALITY_CEILING)
+            quality = QUALITY_CEILING;
 
     }
 }

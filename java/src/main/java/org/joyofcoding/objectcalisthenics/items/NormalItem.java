@@ -38,7 +38,7 @@ public class NormalItem {
     }
 
     protected boolean isPassedDate() {
-        return getSellIn() < 0;
+        return sellIn < 0;
     }
 
 }
