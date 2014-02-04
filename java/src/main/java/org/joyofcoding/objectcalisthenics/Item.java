@@ -30,4 +30,9 @@ public class Item {
 	public int getQuality() {
 		return quality;
 	}
+
+	@Override
+	public String toString() {
+		return "Item [name=" + name +", sellIn=" + sellIn + ", quality=" + quality + "]";
+	}
 }
