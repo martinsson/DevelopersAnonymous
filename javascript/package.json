@@ -6,7 +6,7 @@
   "devDependencies": {
     "grunt": "~0.4.0",
     "mocha": "~1.8.1",
-    "grunt-simple-mocha": "~0.3.2",
+    "grunt-simple-mocha": "~0.4.1",
     "grunt-contrib-watch": "~0.2.0",
     "chai": "~1.5.0"
   },

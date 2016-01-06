@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 reporter: 'nyan'
             },
             all: {
-                src: 'test/**/*.js'
+                src: ['test/**/*.js']
             }
         },
         watch: {
