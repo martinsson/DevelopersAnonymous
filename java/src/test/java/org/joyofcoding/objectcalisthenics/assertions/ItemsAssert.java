@@ -1,9 +1,9 @@
 package org.joyofcoding.objectcalisthenics.assertions;
 
-import static org.fest.assertions.api.Assertions.extractProperty;
+import static org.assertj.core.api.Assertions.extractProperty;
 
-import org.fest.assertions.api.AbstractIterableAssert;
-import org.fest.assertions.api.Assertions;
+import org.assertj.core.api.AbstractIterableAssert;
+import org.assertj.core.api.Assertions;
 import org.joyofcoding.objectcalisthenics.Item;
 
 public class ItemsAssert extends
