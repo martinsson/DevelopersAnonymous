@@ -36,6 +36,18 @@ public class GildedRoseTest {
              .containsOnlyItemSellIns(9, 1, 4, 0, 14, 2);
         
     }
+    
+    @Test public void 
+    after_one_day_with_sufuras_having_sellIn_lesser_than_zero_and_quality_greater_than_zero() throws Exception {
+    	 items = new ArrayList<Item>();
+ 		 		items.add(new Item("Sulfuras, Hand of Ragnaros", -1, 1));
+    	repeatUpdateQuality(1);
+    	
+    	ItemsAssert.assertThat(items)
+    	.containsOnlyItemNames("Sulfuras, Hand of Ragnaros")
+    	.containsOnlyItemQualities(1)
+    	.containsOnlyItemSellIns(-1);
+    }
 
     @Test public void 
     after_three_days() throws Exception {
